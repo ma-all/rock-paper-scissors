@@ -4,6 +4,7 @@ const choicesArr = ['rock', 'paper', 'scissors']
 /*-------------------------------- Variables --------------------------------*/
 let userChoice = ''
 let computerChoice = ''
+let winner = ''
 
 /*------------------------ Cached Element References ------------------------*/
 const choices = document.querySelector('#choices') 
@@ -42,8 +43,18 @@ choices.addEventListener('click', function(event){
     let randomIndex = Math.floor(Math.random() * 3)
     //computer makes a choice
     computerChoice = choicesArr[randomIndex]
+
+    //decide winner
+    if (userChoice === computerChoice){
+        winner = 'Both' //tie
+    } else if (userChoice === 'rock' && computerChoice ==='scissors' || userChoice === 'paper' && computerChoice === 'rock' || userChoice === 'rock' && computerChoice === 'paper') {
+        winner = 'You!'
+    } else {
+        winner = 'Computer!'
+    }
+
     //display what the computer chose
-    resultdisplay.textContent = `Computer chose: ${computerChoice}`
+    resultdisplay.textContent = `Computer chose ${computerChoice}. You chose ${userChoice}. Winner is: ${winner}`
 
     console.log('userChoice: ', userChoice)
     console.log('computerChoice: ', computerChoice)

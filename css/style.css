@@ -24,3 +24,7 @@ body {
 /* .hidden {
     visibility: hidden;
 } */
+
+#result-display{
+    min-height: 30px;
+}
