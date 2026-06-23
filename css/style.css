@@ -1,5 +1,5 @@
 body {
-    background-color:beige;
+    background-color: #FFE5E7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,4 +18,5 @@ body {
 
 .choice:hover {
     border: 2px solid red;
+    cursor: pointer;
 }
