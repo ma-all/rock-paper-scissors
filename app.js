@@ -14,6 +14,8 @@ const scissors = document.querySelector('#scissors')
 
 const reset = document.querySelector('#reset')
 
+const resultdisplay = document.querySelector('#result-display')
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 //event exists in call back functions in event listeners
@@ -40,6 +42,8 @@ choices.addEventListener('click', function(event){
     let randomIndex = Math.floor(Math.random() * 3)
     //computer makes a choice
     computerChoice = choicesArr[randomIndex]
+    //display what the computer chose
+    resultdisplay.textContent = `Computer chose: ${computerChoice}`
 
     console.log('userChoice: ', userChoice)
     console.log('computerChoice: ', computerChoice)
