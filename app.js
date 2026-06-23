@@ -1,7 +1,9 @@
 /*-------------------------------- Constants --------------------------------*/
+const choicesArr = ['rock', 'paper', 'scissors']
 
 /*-------------------------------- Variables --------------------------------*/
 let userChoice = ''
+let computerChoice = ''
 
 /*------------------------ Cached Element References ------------------------*/
 const choices = document.querySelector('#choices') 
@@ -33,7 +35,13 @@ choices.addEventListener('click', function(event){
         rock.classList.add('hidden')
     }
 
+    //this is to allow the computer to choose randomly
+    let randomIndex = Math.floor(Math.random() * 3)
+    //computer makes a choice
+    computerChoice = choicesArr[randomIndex]
+
     console.log('userChoice: ', userChoice)
+    console.log('computerChoice: ', computerChoice)
 })
 
 reset.addEventListener('click', function(){
