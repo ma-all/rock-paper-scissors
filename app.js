@@ -28,14 +28,14 @@ choices.addEventListener('click', function(event){
     //we want to hide buttons that are userChoice
     if(userChoice === 'rock'){
         //add hidden class to paper and scissors buttons
-        paper.setAttribute('disabled', 'disabled')
-        scissors.setAttribute('disabled', 'disabled')
+        paper.disabled = true
+        scissors.disabled = true
     } else if  (userChoice === 'paper') {
-        rock.setAttribute('disabled', 'disabled')
-        scissors.setAttribute('disabled', 'disabled')
+        rock.disabled = true
+        scissors.disabled = true
     } else {
-        paper.setAttribute('disabled', 'disabled')
-        rock.setAttribute('disabled', 'disabled')
+        paper.disabled = true
+        rock.disabled = true
     }
 
     //this is to allow the computer to choose randomly
@@ -50,9 +50,9 @@ choices.addEventListener('click', function(event){
 })
 
 reset.addEventListener('click', function(){
-    paper.removeAttribute('disabled')
-    scissors.removeAttribute('disabled')
-    rock.removeAttribute('disabled')
+    paper.disabled = false
+    scissors.disabled = false
+    rock.disabled = false
 })
 
 /*-------------------------------- Functions --------------------------------*/
